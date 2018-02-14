@@ -59,7 +59,7 @@ We need to grab the following information from the OAuth application.
 * Callback URL
 
 The `Callback URL` is the domain where GitHub will redirect the user after a successful login. You can use a domain name or local host. But we need to append the URL with the path `/api/user/authViaGitHub/callback`. So, the complete url will look like:
-`https://localhost:8080/api/user/authViaGitHub/callback`
+`https://localhost:3030/api/user/authViaGitHub/callback`
 
 Now, we need to configure the credentials inside of the codebase. Open the file `config/credentials.js` add the necessary information. The file looks like this:
 ```js
@@ -76,7 +76,7 @@ We need to provide all the information here. You can notice that we need the dat
 mongodb://localhost:27017/reforum
 ```
 
-Now we are ready to run the application. You can run either run the development environment of the application which will include Hot-Reload for JS codes using Webpack and the Redux dev tool extension, or you can run the production edition. The default port for developer edition is `8080`, and for production is `process.env.PORT`.
+Now we are ready to run the application. You can run either run the development environment of the application which will include Hot-Reload for JS codes using Webpack and the Redux dev tool extension, or you can run the production edition. The default port for developer edition is `3030`, and for production is `process.env.PORT`.
 
 To run the app in development environment:
 ```
@@ -88,7 +88,7 @@ To run the app in production environment:
 $ npm run start
 ```
 
-Now, if you visit [http://localhost:8080](http://localhost:8080) (if you ran the dev), or the production URL, you will see that the application is up and running. Congratulation! But, wait a minute, it's showing you `Sorry, couldn't find the forum`. That is because, we didn't create any forum yet. You can now sign up via github and then visit the admin panel with the url [http://localhost:8080/admin](http://localhost:8080/admin). The application is currently configured in a way that, the first user will become the admin for the system.
+Now, if you visit [http://localhost:3030](http://localhost:3030) (if you ran the dev), or the production URL, you will see that the application is up and running. Congratulation! But, wait a minute, it's showing you `Sorry, couldn't find the forum`. That is because, we didn't create any forum yet. You can now sign up via github and then visit the admin panel with the url [http://localhost:3030/admin](http://localhost:3030/admin). The application is currently configured in a way that, the first user will become the admin for the system.
 
 Here we can create new forums and that forum will be displayed in the application. The first forum will be used as default forum.
 
